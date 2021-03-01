@@ -1,4 +1,4 @@
-package F_curryingPartialFunctions
+package E_curryingPartialFunctions
 
 object CurriedStuff {
 
@@ -10,8 +10,10 @@ object CurriedStuff {
     println(addSomeNumbers(1)(2)(3))
 
 
-    val addOneAndTwoToSomeNumber: Int => Int = addSomeNumbers(1)(2)
+    val addOneAndTwoToSomeNumber: Int => Int = i => addSomeNumbers(1)(2)(i)
 
+    println(addOneAndTwoToSomeNumber)
+//
     println(addOneAndTwoToSomeNumber(3))
   }
 
