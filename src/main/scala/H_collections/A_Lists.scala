@@ -17,9 +17,13 @@ object A_Lists {
 
     // Nil is representation for an empty list, which means you can create new lists like this:
     val typesOfBirds = "Parrot" :: "Swan" :: "Pigeon" :: Nil
+    // "Parrot" :: (Swan :: (Pigeon :: Nil))
+    // Parrot :: (Swan :: List(Pigeon))
+    // Parrot :: List(Swan, Pigeon)
+    // List(Parrot, Swan, Pigeon)
     println(typesOfBirds)
 
-    // And you can prepend of a list to the head of the second list
+    // And you can prepend a list to the head of the second list
     val moreBirds = typesOfBirds ::: List("Goose", "Canary")
     println(moreBirds)
 
