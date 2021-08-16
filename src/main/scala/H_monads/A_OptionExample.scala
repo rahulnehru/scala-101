@@ -1,5 +1,10 @@
 package H_monads
 
+import java.io.FileNotFoundException
+
+import scala.io.Source
+import scala.util.Try
+
 
 /*
  What problems do we encounter in Java?
@@ -43,6 +48,11 @@ object A_OptionExample {
 
     // There are two modes of an Option when evalutating... Some(x) and None
   }
+
+
+  def readFirstLineOfAFile(fileName: String): String =
+    Try(Source.fromFile(name = fileName, enc = "UTF-8").getLines().toList.head).getOrElse("")
+
 
 }
 

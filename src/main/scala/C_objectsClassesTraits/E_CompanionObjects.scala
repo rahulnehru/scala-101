@@ -19,13 +19,24 @@ object MobilePhone {
   // you can ascribe some more functionality here
 }
 
-object Main {
+object PhoneShop {
   def main(args: Array[String]): Unit = {
     val iPhone = MobilePhone("iPhone 3G")
     val samsungS4 = MobilePhone("Samsung", "S4", 300.00)
     val samsungS5 = MobilePhone("S5")
     val iPhoneLifeSpanInYears = MobilePhone.lifespanInYears(iPhone)
   }
+
+
+  def replaceAllChevronsWithDashes(str: String): String = {
+    val removedLeftChevrons = str.replaceAll("<", "-")
+    println(removedLeftChevrons)
+    val removedRightChevrons = removedLeftChevrons.replaceAll(">", "-")
+    println(removedRightChevrons)
+    removedRightChevrons
+  }
+
+
 }
 
 

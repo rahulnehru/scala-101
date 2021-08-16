@@ -9,14 +9,10 @@ object Functions {
   val addThree: (Int, Int) => Int = (i, j) => i + j + 3
 
 
-  addTwo(addOne(1))
 
 
   def main(args: Array[String]): Unit = {
-
-    addOne andThen addTwo apply(1)
-
-    addTwo compose addOne apply(1)
+    addTwo(addOne(1))
   }
 
 }

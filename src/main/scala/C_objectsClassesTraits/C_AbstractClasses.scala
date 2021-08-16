@@ -16,7 +16,7 @@ class RecyclingPlant(name: String, area: Int) extends PlaceOfInterest(name, area
 
 }
 
-object Main {
+object POIs {
   def main(args: Array[String]): Unit = {
     val recyclingPlant = new RecyclingPlant("landfill", 300)
     println(s"Recycling capacity = ${recyclingPlant.recyclingCapacity}")
