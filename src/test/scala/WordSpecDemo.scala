@@ -5,8 +5,9 @@ import matchers.should.Matchers._
 class WordSpecDemo extends AnyWordSpec {
 
   private def obfuscateString(str: String): String = {
-    str.zipWithIndex
-      .map(c => if(c._2 == 0 || c._2 == str.length - 1) c._1 else "*")
+    str // hello
+      .zipWithIndex // List( (h, 0), (e, 1), (l, 2), (l, 3), (o, 4) )
+      .map(c => if(c._2 == 0 || c._2 == str.length - 1) c._1 else "*") // List( (h, 0), (*, 1), ... (o, 4))
       .fold("")((x,y) => s"$x$y").toString
   }
 
@@ -15,6 +16,7 @@ class WordSpecDemo extends AnyWordSpec {
       "string is empty" in {
         val str = ""
         obfuscateString(str) should be ("")
+        obfuscateString(str) should not be ("hello")
       }
     }
 
@@ -32,3 +34,5 @@ class WordSpecDemo extends AnyWordSpec {
     }
   }
 }
+
+

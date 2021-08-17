@@ -14,6 +14,8 @@ class RecyclingPlant(name: String, area: Int) extends PlaceOfInterest(name, area
 
   def recyclingCapacity: Int = area + 300
 
+  override def getLandPrice: Double = area * 1.3
+
 }
 
 object POIs {

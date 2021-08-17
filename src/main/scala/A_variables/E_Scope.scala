@@ -14,7 +14,7 @@ object E_Scope {
 
   class ScopeExtendingClass extends ScopeDefiningClass {
     println(publicByDefault)
-    //  println(privateExplicitly) -- does not compile
+//      println(privateExplicitly) -- does not compile
     println(onlyAvailableInThisPackage)
     println(availableOnlyInEScope)
     println(availableOnlyToSubclasses)

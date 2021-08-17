@@ -28,15 +28,6 @@ object PhoneShop {
   }
 
 
-  def replaceAllChevronsWithDashes(str: String): String = {
-    val removedLeftChevrons = str.replaceAll("<", "-")
-    println(removedLeftChevrons)
-    val removedRightChevrons = removedLeftChevrons.replaceAll(">", "-")
-    println(removedRightChevrons)
-    removedRightChevrons
-  }
-
-
 }
 
 

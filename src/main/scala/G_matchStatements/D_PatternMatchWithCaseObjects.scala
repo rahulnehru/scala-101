@@ -12,6 +12,7 @@ object D_PatternMatchWithCaseObjects {
       case Pet(name, age, "dog") if age > 10 => println(s"$name is a good old boy!")
       case Pet(name, age, "dog") => println(s"$name is a good young boy!")
       case Pet(_, _, "cat") => println(s"good little kitty")
+      case _ => println("")
     }
 
   }

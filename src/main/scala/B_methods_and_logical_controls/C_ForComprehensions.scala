@@ -2,6 +2,11 @@ package B_methods_and_logical_controls
 
 object C_ForComprehensions {
 
+//  Typically some boilerplate in Java
+//  for (int i = 0; i<100; i++) {
+//
+//  }
+
   def simpleForLoop = {
     println("------ simple ------")
     println("Using to")

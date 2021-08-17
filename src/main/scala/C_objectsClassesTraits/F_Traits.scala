@@ -11,7 +11,7 @@ Multiple traits can be mixed-in to an object.
 sealed trait Quacks { def quack = println("Quack!") }
 
 trait Swims {
-  def swim = println("Splash!")
+  def swim: Unit
 }
 
 /*
@@ -24,6 +24,8 @@ object Duck extends Quacks with Swims {
     swim
     quack
   }
+
+  override def swim: Unit = println("swim")
 }
 
 
@@ -33,4 +35,5 @@ object AthleticSwimmer extends Swims {
     swim
   }
 
+  override def swim: Unit = println("swim")
 }
